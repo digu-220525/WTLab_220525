@@ -1,3 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <style>
+        button{
+            size: 10px;
+        }
+        #footer{
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #header{
+            background-color:darkgoldenrod;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: x-large;
+        }
+        #other{
+            background-color:rgb(173, 252, 255);
+            color: black;
+            font-style: oblique;
+            font-size: large;
+        }
+        #logo{
+        }       
+        #profile{
+            border-radius: 50%;
+            border-color: black;
+            background-color: red;
+        }
+        #topics{
+            color: white;
+        }
+    </style>
+</head>
 <body>
-    <h1>hello  WT </h1>
+<header id="header">
+  <div id="logo"><p>DataMind</p></div>
+  <div>
+<form action="/search">
+  <label for="course-search">Find A Course:</label>
+  <input type="search" id="course-search" name="q" placeholder="Enter course name" />
+  <button type="submit">Search</button> 
+</form>
+
+  </div>
+  <div><button onclick="#">Home</button></div>
+  <div><button onclick="#">Courses</button></div>
+  <div><button onclick="#">Quizzes</button></div>
+  <div><button onclick="#">Login</button></div>
+  <div id="profile">
+    <p>Profile</p>
+  </div>
+</header>
+  <div id = 'other'>
+    <p>
+         The provided text for the DataMind platform emphasizes the urgency of addressing climate change through immediate and decisive action, highlighting consequences like extreme weather, rising sea levels, and threats to biodiversity and food security. It frames the issue as an economic and social imperative, suggesting solutions such as transitioning to renewable energy, adhering to international agreements, and implementing individual sustainable practices. The platform also outlines a data science course overview covering Python, data analysis, statistics, visualization, machine learning, deep learning, NLP, generative AI, and MLOps deployment. Additional content includes navigation links for Home, Courses, Quizzes, Login, and Profile, along with a copyright notice.
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </p>
+  
+</div>
+<div id="footer">
+    <footer>
+        <p> DataMind || All Rights Reserved<br><br><br></p>
+        <p>
+            data science course overview<br><br>
+        </p>
+        <div id = 'topics'>
+        <a  href="#">
+            Python Programming & Foundations<br>
+            Data Analysis & Wrangling (Pandas & SQL)<br>
+            Mathematics & Statistical Inference<br>
+            Data Visualization & Business Intelligence<br>
+            Machine Learning (Supervised & Unsupervised)<br>
+            Deep Learning & Natural Language Processing (NLP)<br>
+            Generative AI & MLOps Deployment<br>
+        </a>
+        </div>
+    </footer>
+    </div>
 </body>
+</html>
