@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Learning Platform</title>
     <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:beige;
+            min-width: 160px;
+            box-shadow: 0 18px 16px rgba(0, 0, 0, 0.2);
+            z-index: 0;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         button{
             size: 10px;
         }
@@ -29,6 +46,7 @@
             color: black;
             font-style: oblique;
             font-size: large;
+            align-items: center;
         }
         #logo{
         }       
@@ -39,6 +57,29 @@
         }
         #topics{
             color: white;
+        }
+        .container {
+            display: flex;
+            align-items: center; 
+            gap: 80px; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .container img {
+            max-width: 450px; 
+            height: 450px;
+            border-radius: 8px; 
+        }
+
+        .text-content h2 {
+            color: #0f0404;
+        }
+
+        .text-content p {
+            color: #ad1313;
         }
     </style>
 </head>
@@ -54,38 +95,90 @@
 
   </div>
   <div><button onclick="#">Home</button></div>
-  <div><button onclick="#">Courses</button></div>
+
+  <!-- <div><button onclick="#">Courses</button></div> -->
+<div class="dropdown">
+    <button>Courses</button>
+    <div class="dropdown-content">
+        <a href="#">Data Structure</a>
+        <a href="#">Data science</a>
+        <a href="#">Gen AI</a>
+    </div>
+</div>
   <div><button onclick="#">Quizzes</button></div>
   <div><button onclick="#">Login</button></div>
+  
   <div id="profile">
     <p>Profile</p>
   </div>
 </header>
   <div id = 'other'>
-    <p>
+     
+    <div class="container">
+        <img src="ds.png" alt="Sample Image">
+        <div class="text-content">
+            <h2>data Scinece</h2>
+            <p>
+                1. Foundations & Mathematics
+                <br>
+                2. Programming & Tools
+                <br>
+                3. Core Data Science Modules
+                <br>
+                4. Advanced & Specialist Topics
+                Deep Learning: Artificial Neural Networks, CNNs, and RNNs (using TensorFlow/PyTorch).
+                <br>
+                5. Data Engineering & Cloud
+                <br>
+                6. Ethics & Professional Practice
+
+            </p>
+        </div>
+    </div>
+    <!-- <p>
          The provided text for the DataMind platform emphasizes the urgency of addressing climate change through immediate and decisive action, highlighting consequences like extreme weather, rising sea levels, and threats to biodiversity and food security. It frames the issue as an economic and social imperative, suggesting solutions such as transitioning to renewable energy, adhering to international agreements, and implementing individual sustainable practices. The platform also outlines a data science course overview covering Python, data analysis, statistics, visualization, machine learning, deep learning, NLP, generative AI, and MLOps deployment. Additional content includes navigation links for Home, Courses, Quizzes, Login, and Profile, along with a copyright notice.
         <br><br><br><br><br><br><br><br><br><br><br><br>
-    </p>
-  
+    </p> -->
+    
+<audio controls>
+    <source src = 'Kumkumala.mp3'>
+</audio>
+<div class="set-video">
+  <video width="320" height="240" controls unmuted>
+    <source src="video.mp4">
+  </video>
 </div>
-<div id="footer">
-    <footer>
+<div class =set-iframe>
+    <div class ='website'>
+        <iframe src = "https://en.wikipedia.org/wiki/Data_science"></iframe>
+    </div>
+    <!-- <div class ='google'> -->
+        <!-- <iframe src = "https://www.wikipedia.org/"></iframe>
+    </div> -->
+    <iframe src="dl.pdf" width=auto height="500px" style="border: none;" title="Embedded PDF Viewer">
+    </iframe>
+
+</div>
+
+</div>
+<!-- <div id="footer"> -->
+    <!-- <footer>
         <p> DataMind || All Rights Reserved<br><br><br></p>
         <p>
             data science course overview<br><br>
-        </p>
-        <div id = 'topics'>
-        <a  href="#">
-            Python Programming & Foundations<br>
-            Data Analysis & Wrangling (Pandas & SQL)<br>
-            Mathematics & Statistical Inference<br>
-            Data Visualization & Business Intelligence<br>
-            Machine Learning (Supervised & Unsupervised)<br>
-            Deep Learning & Natural Language Processing (NLP)<br>
-            Generative AI & MLOps Deployment<br>
-        </a>
-        </div>
-    </footer>
-    </div>
+        </p> -->
+        <!-- <div id = 'topics'> -->
+            <!-- <a  href="#"> -->
+                <!-- Python Programming & Foundations<br>
+                Data Analysis & Wrangling (Pandas & SQL)<br>
+                Mathematics & Statistical Inference<br>
+                Data Visualization & Business Intelligence<br>
+                Machine Learning (Supervised & Unsupervised)<br>
+                Deep Learning & Natural Language Processing (NLP)<br>
+                Generative AI & MLOps Deployment<br> -->
+            <!-- </a> -->
+        <!-- </div> -->
+    <!-- </footer>
+</div> -->
 </body>
 </html>
