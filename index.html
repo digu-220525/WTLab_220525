@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Learning Platform</title>
     <style>
+        .table{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+}
+
         .dropdown {
             position: relative;
             display: inline-block;
@@ -15,7 +24,6 @@
             position: absolute;
             background-color:beige;
             min-width: 160px;
-            box-shadow: 0 18px 16px rgba(0, 0, 0, 0.2);
             z-index: 0;
         }
 
@@ -81,6 +89,11 @@
         .text-content p {
             color: #ad1313;
         }
+        #table{
+            background-color: rgb(155, 141, 124);
+            color: #2804aa;
+            font-size: large
+        }
     </style>
 </head>
 <body>
@@ -96,7 +109,6 @@
   </div>
   <div><button onclick="#">Home</button></div>
 
-  <!-- <div><button onclick="#">Courses</button></div> -->
 <div class="dropdown">
     <button>Courses</button>
     <div class="dropdown-content">
@@ -106,7 +118,14 @@
     </div>
 </div>
   <div><button onclick="#">Quizzes</button></div>
-  <div><button onclick="#">Login</button></div>
+  <!-- <div><button onclick="register.html">Login</button></div> --><!--wrong-->
+<div>
+    <a href="register.html">
+        <button>Login</button>
+    </a>
+</div>
+  <div><button onclick="#">Profile</button></div>
+
   
   <div id="profile">
     <p>Profile</p>
@@ -159,7 +178,12 @@
     </iframe>
 
 </div>
+<div class="table">
+  <a href="table.html" class="table-btn"><button>
+Course Comparison
+  </button> </a>
 
+</div>
 </div>
 <!-- <div id="footer"> -->
     <!-- <footer>

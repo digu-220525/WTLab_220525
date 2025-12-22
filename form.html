@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration - Learning Platform</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body >
+    <form action="/submit-form" method="POST">
+        <fieldset>
+            <legend><strong>Student Profile</strong></legend> 
+            <label for="username">Username:</label> 
+            <input type="text" name="usernames" id="username" placeholder="NameNumber">
+            <br><br>
+
+            <div class="password-field">
+                <label for="fakePassword">Password:</label>
+                <input type="password" id="fakePassword" placeholder="Enter password"/>
+                <span><i id="toggler" class="far fa-eye" style="cursor: pointer;"></i></span>   
+            </div>
+            <br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" id="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>  
+        </fieldset>
+
+        <!-- SECTION 2: COURSE SELECTION (Specific to your platform) -->
+        <fieldset>
+            <legend><strong>Course Enrollment</strong></legend>
+            
+            <label for="course">Interested Track:</label>
+            <select id="course" name="course_track">
+                <option value="ds">Data Science</option>
+                <option value="dsa">Data Structures & Algorithms</option>
+                <option value="genai" selected>Generative AI</option>
+            </select>
+            <br><br>
+
+            <label>Prerequisites Known:</label><br>
+            <input type="checkbox" name="skills" id="python">
+            <label for="python">Python</label>
+            <input type="checkbox" name="skills" id="sql">
+            <label for="sql">SQL</label>
+            <input type="checkbox" name="skills" id="math">
+            <label for="math">Linear Algebra</label>
+            <br><br>
+
+            <label for="resume">Upload Resume/CV:</label>
+            <input type="file" name="upload" id="resume"><br><br>
+
+            <label for="bio">Student Bio:</label><br>
+            <textarea rows="4" cols="40" name="bio" id="bio" placeholder="Tell us about your learning goals..."></textarea>
+        </fieldset>
+            
+        <!-- SECTION 3: CONTACT INFO -->
+        <fieldset>
+            <legend><strong>Contact Details</strong></legend>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="user_email" required> 
+            <br><br>
+            
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="user_phone"><br><br>
+            
+            <label for="dob">Date of Birth: </label>
+            <input type="date" id="dob" name="myDate"><br><br>
+
+            <label for="budget">Learning Budget ($): </label>
+            <input type="number" id="budget" name="myBonus" min="0"> 
+        </fieldset>
+
+        <br>
+        <button type="submit" style="padding: 10px 20px; background-color: blue; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Submit Application
+        </button>
+        <button type="reset" style="padding: 10px 20px; cursor: pointer;">Reset Form</button>
+    </form>
+
+</body>
+</html>
+
+</body>
+</html>
