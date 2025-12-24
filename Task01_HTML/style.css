@@ -1,0 +1,94 @@
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:beige;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+button{
+    size: 10px;
+}
+#footer{
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header{
+    background-color:darkgoldenrod;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+}
+#other{
+    background-color:rgb(173, 252, 255);
+    color: black;
+    font-style: oblique;
+    font-size: large;
+    align-items: center;
+}
+#logo{
+
+}       
+#profile{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    border-radius: 50%;
+    border-color: white;
+    background-color:black;
+}
+#topics{
+    color: white;
+}
+.hero {
+    display: flex;
+    align-items: center; 
+    gap: 80px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+}
+
+.hero img {
+    /* height: px; */
+    border-radius: 48px; 
+}
+
+.text-content h2 {
+    color: #0f0404;
+}
+
+.text-content p {
+    color: #ad1313;
+}
+#table{
+    background-color: rgb(155, 141, 124);
+    color: #2804aa;
+    font-size: large
+}
