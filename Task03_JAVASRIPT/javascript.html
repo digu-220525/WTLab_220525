@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LearnSmart Online Learning</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 5px 50px;/*top right*/
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> LearnSmart Online Learning Platform</h1>
+    <p>Click the buttons to see JavaScript popup boxes in action.</p>
+
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="askName()">Prompt Name</button>
+    <button onclick="confirmEnroll()">Confirm Enrollment</button>
+
+    <script>
+        //alert popup
+        function showAlert() {
+            alert("Welcome to LearnSmart Online Learning!");
+        }
+
+        //prompt popup
+        function askName() {
+            let name = prompt("Enter your name:");
+
+            if (name !== null && name !== "") {
+                alert("Hello " + name + ", welcome to LearnSmart!");
+            } else {
+                alert("No name entered");
+            }
+            let a = Number(prompt('Enter your roll no: '))
+            alert(`Hello Aspirant roll no ${a}`)
+        }
+
+        //confirm popup
+        function confirmEnroll() {
+            let choice = confirm("Do you want to enroll in DS course?");
+
+            if (choice) {
+                alert("Enrollment Successful!");
+            } else {
+                alert("Enrollment Cancelled");
+            }
+        }
+    </script>
+
+</body>
+</html> 
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <p class="change-color">This is the first paragraph.</p>
+    <p>This is a paragraph without the specified class.</p>
+    <p class="change-color">This is the second paragraph.</p>
+    <button onclick="changeColor()">Change Color of Text</button>
+<script>
+function changeColor() {
+    // Select all elements with the class 'change-color'
+       var elements = document.querySelectorAll('.change-color');
+    // Iterate over each element and change its color to red
+       elements.forEach(function(element) {
+       element.style.color = 'red';
+   });
+}
+</script>
+</body>
+</html>
+
