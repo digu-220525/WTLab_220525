@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Google Login</title>
+</head>
+<body>
+
+<h2>Firebase Login</h2>
+<button onclick="googleLogin()">Login with Google</button>
+
+<h3>Output:</h3>
+<div id="output"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup } 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBuCaHhcit3p6cw1vyF-1nRPB_GRCtBnkY",
+    authDomain: "datamind-4e697.firebaseapp.comm",
+    projectId: "datamind-4e697D",
+    appId: "1:210938001643:web:5a1b30ecd851c7215b66aD"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+window.googleLogin = async function () {
+    try {
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+
+        // Without backend (client-side display)
+        document.getElementById("output").innerHTML =
+            "<b>Client-side login:</b><br>" +
+            "Name: " + user.displayName + "<br>" +
+            "Email: " + user.email + "<br><br>" +
+            "Sending token to backend...";
+
+        // Get ID token
+        const token = await user.getIdToken();
+
+        // Send to backend
+        const response = await fetch("firebase_verify.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ token: token })
+        });
+
+        const data = await response.text();
+
+        document.getElementById("output").innerHTML +=
+            "<br><b>Backend response:</b><br>" + data;
+
+    } catch (error) {
+        console.error(error);
+        alert("Login failed");
+    }
+};
+</script>
+
+</body>
+</html>
