@@ -16,12 +16,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, GoogleAuthProvider, signInWithPopup } 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBuCaHhcit3p6cw1vyF-1nRPB_GRCtBnkY",
-    authDomain: "datamind-4e697.firebaseapp.comm",
-    projectId: "datamind-4e697D",
-    appId: "1:210938001643:web:5a1b30ecd851c7215b66aD"
-};
+
+import { firebaseConfig } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
